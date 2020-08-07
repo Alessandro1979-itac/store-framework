@@ -11,12 +11,15 @@
       "header-layout.mobile"
     ]
   },
+
   "header-layout.desktop": {
     "children": [
       "header-row#notification",
-      "header-row#main"
+      "header-row#main",
+      "header-row#menu"
     ]
   },
+
   "header-layout.mobile": {
     "children": [
       "header-row#notification",
@@ -24,6 +27,7 @@
       "header-row#search"
     ]
   },
+
   "header-row#main": {
     "children": [
       "logo",
@@ -38,6 +42,7 @@
       "fullWidth": false
     }
   },
+
   "header-row#notification": {
     "children": [
       "header-spacer",
@@ -45,18 +50,22 @@
       "header-spacer"
     ]
   },
+
   "header-row#main-mobile": {
     "children": [
+      "drawer",
       "logo",
       "header-spacer",
       "minicart",
       "login"
-    ],  
+    ],
+  
     "props": {
       "sticky": true,
       "inverted":true
     }
-  },  
+  },
+  
   "header-row#search": {
     "children": [
       "search-bar"
@@ -65,21 +74,32 @@
       "sticky": true
     }
   },
+
   "login":{
     "props": {
       "showIconProfile": true,
       "iconLabel": "Login"
     }
   },
+  
   "logo":{
     "props": {
       "url": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/flatflat___6081e50402943bcb11bc45a8e613aa72.png"
     }
   },
+
   "rich-text#header": {
     "props": {
       "text": "**Free Shipping on orders over $50**",
       "textPosition": "CENTER"
     }
+  },
+  
+  "header-row#menu": {
+    "children": [
+      "header-spacer",
+      "vtex.menu@2.x:menu#categories",
+      "header-spacer"
+    ]
   }
 }
